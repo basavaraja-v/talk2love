@@ -1,0 +1,6 @@
+elevenlabs 
+langchain
+openai
+text_generation
+python-dotenv
+chromadb
