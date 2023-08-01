@@ -58,8 +58,7 @@ def get_response(prompt):
             memory=memory,
             chain_type='map_reduce'
         )
-        question = f"{prompt}"
-        result = qa({"question": question})
+        result = qa({"question": prompt})
         return result['answer']
 
     _prompt = f"""
