@@ -4,3 +4,5 @@ openai
 text_generation
 python-dotenv
 chromadb
+tiktoken
+nltk
