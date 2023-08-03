@@ -124,7 +124,7 @@ def save_whatsapp_data(whatsapp_file_path):
     embeddings = OpenAIEmbeddings()
     if os.path.exists(persist_directory):
         os.remove(persist_directory)
-    text_splitter = NLTKTextSplitter()
+    text_splitter = NLTKTextSplitter(chunk_size=1, chunk_overlap=0)
     chunks = text_splitter.split_documents(whatsappdoc)
     db = Chroma.from_documents(chunks, embeddings, persist_directory=persist_directory)
     db.persist()
